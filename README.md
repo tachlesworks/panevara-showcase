@@ -25,7 +25,7 @@ macOS has no public way to embed another app's window inside yours. Apps that mi
 
 ## How it works
 
-Native Swift on public macOS APIs: ScreenCaptureKit for the live previews, the Accessibility API to move, resize and raise other apps' windows, and AppKit for the floating strip. No kernel extensions, no private entitlements. It needs two permissions you grant once: **Screen Recording** (previews) and **Accessibility** (window control). It runs from a single background process and idles at about 1% CPU.
+Native Swift on public macOS APIs: ScreenCaptureKit for the live previews, the Accessibility API to move, resize and raise other apps' windows, and AppKit for the floating strip. No kernel extensions, no private entitlements. It needs two permissions you grant once: **Screen Recording** (previews) and **Accessibility** (window control). Previews are captured at thumbnail size and about 10 frames per second, so the load stays low.
 
 ## Status
 
